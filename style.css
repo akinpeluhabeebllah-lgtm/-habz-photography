@@ -1,0 +1,163 @@
+/* --- Base Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Enables the smooth scrolling when clicking the hero button */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Landing Section (Hero) --- */
+#landing {
+    height: 100vh;
+    /* Uses a dark overlay over a shipping photography background */
+    background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)),
+                url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Button Styling --- */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #ff6b6b;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn:hover {
+    background-color: #ee5253;
+    transform: translateY(-2px);
+}
+
+/* --- Gallery Section --- */
+#gallery {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #0a192f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Flexbox Layout for the Images */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-container img {
+    width: 100%;
+    max-width: 360px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* --- Footer Section --- */
+footer {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: #ff6b6b;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+footer hr {
+    margin: 30px auto;
+    width: 60%;
+    border: 0;
+    height: 1px;
+    background-color: #233554;
+}
+
+/* Student Info Styling */
+.student-info {
+    font-size: 0.95rem;
+    color: #8892b0;
+    line-height: 1.8;
+}
+
+.student-info strong {
+    color: #ccd6f6;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .gallery-container img {
+        max-width: 100%; /* Allows images to take full width on small screens */
+    }
+}
